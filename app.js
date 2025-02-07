@@ -15,20 +15,11 @@ function agregarAmigo() {
         alert('Necesitas agregar un nombre');
         return
     } else {
+        //agregar el nombre a la lista
         nombres.push(nombreAmigo);
-        console.log(nombres);
         limpiarCaja();
         recorrerAmigos();
         return;
-    }
-}
-
-
-//recorre la lista de nombres
-function recorrerAmigos() {
-    for (let i = 0; i < nombres.length - 1; i++) {
-        	lista = document.getElementById('listaAmigos');
-            
     }
 }
 
@@ -48,3 +39,19 @@ function recorrerAmigos() {
         // Agregar el <li> a la lista
         lista.appendChild(li);
     }}
+
+
+function sortearAmigo() {
+//Generar numero aleatorio
+
+if (nombres.length == 0) { 
+    alert('Aun no has agregado ningun nombre a la lista');
+    return;
+} else {
+    let numeroAleatorio = Math.floor(Math.random() * nombres.length);
+    let amigoSorteado = nombres[numeroAleatorio];
+    document.getElementById('resultado').innerHTML = `El amigo sorteado es: ${amigoSorteado}`;
+    nombres = [];
+    document.getElementById('listaAmigos'). innerHTML = "";
+}
+}
