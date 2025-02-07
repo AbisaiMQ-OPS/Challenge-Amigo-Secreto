@@ -32,7 +32,6 @@ function recorrerAmigos() {
     }
 }
 
-*/
 function recorrerAmigos() {
     // Obtener el elemento <ul> con el ID "listaAmigos"
     let lista = document.getElementById('listaAmigos');
@@ -48,16 +47,4 @@ function recorrerAmigos() {
         li.textContent = nombres[i];
         // Agregar el <li> a la lista
         lista.appendChild(li);
-    }
-}
-
-
-// Generar un numero aleatorio
-
-
-
-//
-//
-//
-//
-//
+    }}
